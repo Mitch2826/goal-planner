@@ -64,6 +64,7 @@ input, select {
   border-radius: 5px;
   background: linear-gradient(to right, var(--highlight), var(--accent));
   margin: 0.5rem 0;
+  
 }
 
 .warning {
