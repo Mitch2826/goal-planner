@@ -48,10 +48,11 @@ function App() {
       loadGoals();
 
     },[]);
-
+//load goals
     function loadGoals() {
       getGoals().then(setGoals);
     }
+  
     function handleAdd(goal){
       const payload={...goal, savedAmount: 0, createdAt: new Date().toISOString()};
       createGoal(payload).then(() => {
@@ -67,6 +68,7 @@ function App() {
         setSelectedGoal(null);
       });
     }
+
     function handleDelete(id){
       if(window.confirm("Are you sure you want to delete this goal?")){
         deleteGoal(id).then(() => {
@@ -119,18 +121,7 @@ function App() {
         );
 
 
-
-
-
-
-    
-
-
 }
-
-
-
-
 
 
 
