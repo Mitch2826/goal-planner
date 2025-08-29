@@ -11,9 +11,12 @@ export default function GoalCard({goal, onEdit, onDelete}) {
             <p>Category: {goal.category}</p>
             <p>Deadline: {goal.deadline}</p>
 
-            <div className="progress-bar" style={{width: `${percent}%`}}></div>
-            <p>Saved: {goal.savedAmount} / {goal.targetAmount} </p>
-            <p>Remaining: {goal.targetAmount - goal.savedAmount}</p>
+            <div style={{ background: '#eee', borderRadius: '6px', overflow: 'hidden'}}>
+                <div className="progress-bar" style={{width: `${percent}%`}}></div>
+                <p>Saved: {goal.savedAmount} / {goal.targetAmount} </p>
+                <p>Remaining: {goal.targetAmount - goal.savedAmount}</p>
+            </div>
+            
         
             {isWarning && <p className="warning">Warning: Only {daysLeft} days left!</p>}
             {isOverdue && <p className="overdue">Overdue!</p>}
